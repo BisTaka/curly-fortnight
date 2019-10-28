@@ -42,7 +42,7 @@ class FirstController extends Controller
         $data_val =  request()->validate(array(
             'tinggi_badan' => 'required|numeric',
             'berat_badan' => 'required|numeric',
-            'tensi_user' => 'required|numeric',
+            'tensi_user' => 'required',
         ));
 
         First::create($data_val);
@@ -81,8 +81,10 @@ class FirstController extends Controller
      */
     public function update(Request $request, First $first)
     {
-        $data_val = request()->validate(array(
-            'body' => 'required',
+        $data_val =  request()->validate(array(
+            'tinggi_badan' => 'required|numeric',
+            'berat_badan' => 'required|numeric',
+            'tensi_user' => 'required',
         ));
 
         $first->update($data_val);
