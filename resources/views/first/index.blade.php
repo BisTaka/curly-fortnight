@@ -5,6 +5,7 @@
     <br>
     <a class="btn btn-block btn-info" href="{{ route('first.create') }}">Buat Data baru</a>
     <br>
+    <h5 class="text-center">{{ $data_tips->tips_user }}</h5>
     <hr>
     <table class="table table-hover">
         <thead class="thead-inverse">
