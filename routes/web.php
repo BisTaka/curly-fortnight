@@ -12,7 +12,13 @@
 */
 
 
-Route::resource('/first', 'FirstController');
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('/first', 'FirstController');
+    
+    Route::get("/" , function () {
+        return view('welcome');
+    });
+});
 
 Auth::routes();
 
